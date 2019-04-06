@@ -167,7 +167,9 @@ function init() {
     document.querySelector('.player-0-panel').classList.remove('winner');
     document.querySelector('.player-1-panel').classList.remove('winner');
     
-    // add active player styling back to player 1
+    // add active player styling back to player 1, you have to do it like this because in the case where player 2 is active prior to a winner and you select new game, it will display 2 active players
+    document.querySelector('.player-0-panel').classList.remove('active');
+    document.querySelector('.player-1-panel').classList.remove('active');
     document.querySelector('.player-0-panel').classList.add('active');
     
 } // end function
